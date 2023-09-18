@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Recommendations</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/list-groups/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            
+        }
+
+        h2 {
+            color: #000000;
+            font-size: 35px;
+           
+        }
+
+        ul {
+            list-style: none;
+            padding: 0; margin: 0 auto;
+            width: 500px;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background-color: #fff;
+            border: #ddd;
+            border-radius: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #00b368;
+            color: #fff;
+            padding: 5px 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+
+        a:hover {
+            background-color: #022b1a;
+        }
+    </style>
+</head>
+<body>
+    <h2>Course Recommendations for </h2><h2 style="color: #00b368;">{{ course_title }}</h2> </h2>
+    <ul>
+        {% if recommendations %}
+            {% for course in recommendations %}
+                <li>{{ course }}</li>
+            {% endfor %}
+        {% else %}
+            <li>No recommendations found.</li>
+        {% endif %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

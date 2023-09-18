@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Recommendation System</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/list-groups/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #000000;
+            text-align: center;
+        }
+
+        .back{
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            width: 500px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        select, input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #00b368;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #022b1a;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 5px 10px;
+            background-color: #fff;
+            border:  #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Online Course Recommendation System</h1>
+    <div class="back">
+        <form action="/result" method="post">
+            <label for="course_title">Enter a course title</label>
+            <input type="text"  class="form-control form-control-lg" name="course_title" placeholder="Course title">
+            <label for="num_recommendations">Number of Recommendations:</label>
+            <input type="number" id="num_recommendations" name="num_recommendations" value="5" min="1" max="10"><br><br>
+            <input type="submit" value="Generate Recommendations">
+        </form>
+        <div>
+            <h2>Example Of Courses</h2>
+            <ul>
+                <li>Learn basics of HTML in 30 Minutes</li>
+                <li>Learn Web Development by Creating a Social Network </li>
+                <li>How To Build A Facebook Messenger Chat Bot From Scratch</li>
+                <li>Introductory To HTML and CSS</li>
+                <li>Guitar Lessons - Two Handed Tapping Essentials</li>
+                <li>jQuery UI in Action: Build 5 jQuery UI Projects</li>
+                <li>How To Build Your Own Web Banner Design Business</li>
+                <li>Motion Graphic With After Effect From Scratch in 5 Hours</li>
+                <li>Photoshop JumpStart</li>
+                <li>7 Secrets To Designing In Black and White</li>
+                <li>How To Earn Some Bitcoin Every Time You Use A Search Engine</li>
+                <li>Finance for Non Finance Executives</li>
+                <li>How to Make IT Work Successfully in Capital Markets</li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
